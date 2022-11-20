@@ -1,6 +1,8 @@
 # ShopSiteAndWarehousesManagementOnAngularAndC#
 C# Full Stack Pet-Project
 
+See Wiki for details
+
 # Stack:
 
 + .Net Core MVC
