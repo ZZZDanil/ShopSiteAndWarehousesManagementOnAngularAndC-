@@ -1,0 +1,61 @@
+<div class="main-catalog-panel">
+  <div class="catalog-params-panel">
+    <mat-form-field class="example-form-field" appearance="legacy" color="primary">
+      <mat-label>Магазин</mat-label>
+      <mat-select [(ngModel)]="selectedWarehouses"
+                  (selectionChange)="onChangeWarehouse()">
+        <mat-option *ngFor="let warehouse of allWarehouses" [value]="warehouse.id">{{warehouse.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-form-field" appearance="legacy" color="primary">
+      <mat-label>Тип Товара</mat-label>
+      <mat-select [(ngModel)]='selectedTypes'
+                  (selectionChange)="onChangeType()">
+        <mat-option *ngFor="let type of allTypes" [value]="type.id">{{type.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <!--
+    <div>Найдено Товаров: 5</div>
+  -->
+  </div>
+  <div class="catalog-items-list-panel">
+    <div class="example-form-field">
+      <mat-form-field class="example-form-field" appearance="legacy">
+        <mat-label>Уточни товар</mat-label>
+        <input matInput type="text" [(ngModel)]="searchInput">
+        <button matSuffix mat-icon-button aria-label="Clear" >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <div *ngIf="items != null && items.length > 0; else elseTemplate">
+      <mat-grid-list cols="4" rowHeight="11:18" gutterSize="5" >
+        <mat-grid-tile *ngFor="let item of items">
+          <my-item-card [model] = "item" (click)="selectCard(item)"></my-item-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+    <ng-template #elseTemplate>
+      Ничего не найдено.
+    </ng-template>
+    
+  </div>
+
+  <div class="catalog-about-panel">
+    <div style="visibility: hidden; height: 0;">
+      <mat-form-field class="example-form-field" appearance="legacy">
+        <mat-label>Уточни товар</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </div>
+
+    <div class="catalog-about-panel-label">Описание Товара</div>
+    <div class="catalog-about-card"
+         *ngIf="selectedCard != null; else elseSelectedCardTemplate">
+      <my-item-card-about [model]="selectedCard"></my-item-card-about>
+    </div>
+    <ng-template #elseSelectedCardTemplate>
+      Выбери Товар
+    </ng-template>
+  </div>
+</div>

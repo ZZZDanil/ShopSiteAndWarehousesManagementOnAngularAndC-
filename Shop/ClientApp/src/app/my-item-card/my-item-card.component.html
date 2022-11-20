@@ -1,0 +1,25 @@
+<div class="card-block">
+  <img class="card-image" src={{IMAGE}}>
+  <div class="card-short-info">
+    <div class="card-name">{{model?.name ? model?.name : "Слиток из Skyrim"}}</div>
+    <div class="card-price-row">
+      <div class="card-price">{{model?.price ? model?.price : 700}} P</div>
+      <div class="card-items">
+        <mat-form-field class="card-items" appearance="legacy">
+          <input class="card-items" min="0" type="number" matInput [(ngModel)]="cardItems">
+        </mat-form-field>
+      </div>
+    </div>
+    <button class="card-buy-button"
+            mat-flat-button color="accent"
+            (click)="addItemToBasket()">
+      Добавить
+    </button>
+    <div class="card-buy-button-comment">В корзину</div>
+    <div class="card-down-info-push"></div>
+    <div class="card-down-info-all-items">Всего: {{model?.quantity ? model?.quantity : 0}}</div>
+    <div class="card-down-info-in-bag">В корзине: 0</div>
+  </div>
+  <!--
+  <div class="card-down-info"></div>-->
+</div>

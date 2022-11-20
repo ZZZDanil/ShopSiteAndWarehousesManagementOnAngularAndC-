@@ -1,0 +1,32 @@
+.main-logo-main-panel {
+  flex-grow: 50;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-logo-panel {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+}
+
+.main-logo {
+  font-size: 6.0rem;
+  text-align: center;
+  align-self: center;
+}
+
+.main-logo-down {
+  font-size: 1.2rem;
+  text-align: center;
+  align-self: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.main-logo-down-button {
+  align-self: center;
+}
+

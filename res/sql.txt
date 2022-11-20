@@ -1,0 +1,38 @@
+CREATE TABLE item_types (
+	id serial PRIMARY KEY,
+	name VARCHAR ( 50 )
+);
+CREATE TABLE warehouses (
+	id serial PRIMARY KEY,
+	name VARCHAR ( 50 )
+);
+
+CREATE TABLE items (
+	id serial PRIMARY KEY,
+	name VARCHAR ( 50 ),
+	type INTEGER,
+	weight INTEGER,
+	date Date,
+	image Bytea,
+	about VARCHAR ( 250 ),
+	warehouse INTEGER,
+	price INTEGER,
+	quantity INTEGER,
+	new_price INTEGER,
+	moving BOOLEAN,
+	FOREIGN KEY (type) REFERENCES item_types (id),
+	FOREIGN KEY (warehouse) REFERENCES warehouses (id)
+);
+
+
+INSERT INTO warehouses (name) VALUES ('Москва');
+INSERT INTO warehouses (name) VALUES ('Санкт-Петербург');
+INSERT INTO warehouses (name) VALUES ('Омск');
+
+INSERT INTO item_types (name) VALUES ('Еда');
+INSERT INTO item_types (name) VALUES ('Одежда');
+INSERT INTO item_types (name) VALUES ('Разное');
+
+
+
+C:\"Program Files"\PostgreSQL\14\bin\pg_ctl.exe restart -D  "C:\Program Files\PostgreSQL\14\data"

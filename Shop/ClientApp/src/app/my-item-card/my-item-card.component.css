@@ -1,0 +1,88 @@
+@import '../../styles.css';
+
+.card-block {
+  display: flex;
+  flex-direction: column;
+  /*height: 300px;*/
+  max-height: 300px;
+  aspect-ratio: 11 / 18;
+  background-color: var(--ggg);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  padding: 4px;
+  margin: 4px;
+  border-radius: 2px;
+}
+.card-image {
+  flex: 2;
+  justify-items: start;
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  padding: 4px 0 4px 0;
+}
+.card-short-info {
+  flex: 3;
+  display:flex;
+  flex-direction:column;
+  padding:0 24px 24px 24px;
+  justify-content:start;
+  height:100%;
+}
+.card-down-info {
+  flex: 1 ;
+}
+
+.card-name {
+  font-size: 14px;
+  text-align: left;
+}
+.card-price-row {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+.card-price {
+  font-size: 20px;
+  flex: 1;
+  text-align: left;
+  align-self: center;
+}
+.card-items {
+  font-size: 16px;
+  text-align: right;
+  flex: 1;
+  margin-top: 3px;
+  align-self: center;
+  display: block;
+  min-width: 0;
+  width: auto;
+}
+.card-buy-button {
+  text-align: center;
+}
+.card-buy-button-comment {
+  font-size: 8px;
+  align-self: center;
+  text-align: center;
+}
+.card-down-info-push {
+  margin-bottom: auto;
+}
+.card-down-info-all-items {
+  margin-top: 12px;
+  font-size: 12px;
+  text-align: left;
+  /*
+
+      display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  */
+}
+.card-down-info-in-bag {
+  font-size: 12px;
+  text-align: left;
+}
+

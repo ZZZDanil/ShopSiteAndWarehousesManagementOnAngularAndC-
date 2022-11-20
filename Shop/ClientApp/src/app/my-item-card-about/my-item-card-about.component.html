@@ -1,0 +1,12 @@
+<div class="card-block">
+  <img class="card-image" src={{IMAGE}}>
+  <div class="card-short-info">
+    <div class="card-name">{{model?.name ? model?.name : "Name"}}</div>
+    <div class="card-price-row">
+      <div class="card-price">{{model?.price ? model?.price : 123}} P</div>
+    </div>
+  </div>
+</div>
+<div class="card-about">
+  {{model?.about ? model?.about : "О товаре и очень много иной информации о товаре..."}}
+</div>
