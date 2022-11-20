@@ -11,3 +11,8 @@ C# Full Stack Pet-Project
 
 Made in Visual Studio 2022
 
+# For Install Angular libs:
+
++ cd .\Shop\ClientApp\
++ npm install
+
