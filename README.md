@@ -1,7 +1,7 @@
 # ShopSiteAndWarehousesManagementOnAngularAndC#
 C# Full Stack Pet-Project
 
-See Wiki for details
+See [Wiki](https://github.com/ZZZDanil/ShopSiteAndWarehousesManagementOnAngularAndC-/wiki) for details
 
 # Stack:
 
